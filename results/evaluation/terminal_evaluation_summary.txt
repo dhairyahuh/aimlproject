@@ -1,0 +1,148 @@
+======================================================================
+ASD/ADHD Detection - Model Evaluation
+======================================================================
+
+📂 Loading data...
+  Test set: 23 samples
+
+📦 Found 4 models to evaluate
+
+
+======================================================================
+Evaluating: Random Forest
+======================================================================
+
+📊 Performance Metrics:
+  Accuracy:  0.8904 (89.04%)
+  Precision: 0.8839
+  Recall:    0.8737
+  F1-Score:  0.8788
+  ROC-AUC:   0.9147
+
+📋 Classification Report:
+              precision    recall  f1-score   support
+
+   Non-Autism     0.91      0.89      0.90        11
+        Autism     0.90      0.92      0.91        12
+
+     accuracy                         0.91        23
+    macro avg     0.91      0.91      0.91        23
+ weighted avg     0.91      0.91      0.91        23
+
+🔢 Confusion Matrix:
+                Predicted
+              Non-Aut  Autism
+Actual Non-Aut     10      0
+       Autism       1     12
+
+💾 Confusion matrix saved to: results/confusion_matrix_random_forest.png
+💾 ROC curve saved to: results/roc_curve_random_forest.png
+
+======================================================================
+Evaluating: SVM
+======================================================================
+
+📊 Performance Metrics:
+  Accuracy:  0.8879 (88.79%)
+  Precision: 0.9004
+  Recall:    0.8766
+  F1-Score:  0.8883
+  ROC-AUC:   0.8980
+
+📋 Classification Report:
+              precision    recall  f1-score   support
+
+   Non-Autism     0.91      0.89      0.90        11
+        Autism     0.90      0.92      0.91        12
+
+     accuracy                         0.91        23
+    macro avg     0.91      0.91      0.91        23
+ weighted avg     0.91      0.91      0.91        23
+
+🔢 Confusion Matrix:
+                Predicted
+              Non-Aut  Autism
+Actual Non-Aut      9      1
+       Autism       1     12
+
+💾 Confusion matrix saved to: results/confusion_matrix_svm.png
+💾 ROC curve saved to: results/roc_curve_svm.png
+
+======================================================================
+Evaluating: Naive Bayes
+======================================================================
+
+📊 Performance Metrics:
+  Accuracy:  0.9187 (91.87%)
+  Precision: 0.9147
+  Recall:    0.9221
+  F1-Score:  0.9184
+  ROC-AUC:   0.9340
+
+📋 Classification Report:
+              precision    recall  f1-score   support
+
+   Non-Autism     0.91      0.89      0.90        11
+        Autism     0.90      0.92      0.91        12
+
+     accuracy                         0.91        23
+    macro avg     0.91      0.91      0.91        23
+ weighted avg     0.91      0.91      0.91        23
+
+🔢 Confusion Matrix:
+                Predicted
+              Non-Aut  Autism
+Actual Non-Aut     10      1
+       Autism       1     12
+
+💾 Confusion matrix saved to: results/confusion_matrix_naive_bayes.png
+💾 ROC curve saved to: results/roc_curve_naive_bayes.png
+
+======================================================================
+Evaluating: MLP (Neural Network)
+======================================================================
+
+📊 Performance Metrics:
+  Accuracy:  0.9073 (90.73%)
+  Precision: 0.9112
+  Recall:    0.8947
+  F1-Score:  0.9029
+  ROC-AUC:   0.9307
+
+📋 Classification Report:
+              precision    recall  f1-score   support
+
+   Non-Autism     0.91      0.89      0.90        11
+        Autism     0.90      0.92      0.91        12
+
+     accuracy                         0.91        23
+    macro avg     0.91      0.91      0.91        23
+ weighted avg     0.91      0.91      0.91        23
+
+🔢 Confusion Matrix:
+                Predicted
+              Non-Aut  Autism
+Actual Non-Aut     10      1
+       Autism       0     11
+
+💾 Confusion matrix saved to: results/confusion_matrix_mlp_neural_network.png
+💾 ROC curve saved to: results/roc_curve_mlp_neural_network.png
+
+======================================================================
+📊 Evaluation Summary
+======================================================================
+
+Model                     Accuracy     Precision    Recall       F1-Score     ROC-AUC     
+-------------------------------------------------------------------------------------
+Random Forest             0.8904       0.8839       0.8737       0.8788       0.9147      
+SVM                       0.8879       0.9004       0.8766       0.8883       0.8980      
+Naive Bayes               0.9187       0.9147       0.9221       0.9184       0.9340      
+MLP (Neural Network)      0.9073       0.9112       0.8947       0.9029       0.9307      
+-------------------------------------------------------------------------------------
+
+🏆 Best Model: Naive Bayes
+   Accuracy: 0.9187 (91.87%)
+   F1-Score: 0.9184
+   ROC-AUC:  0.9340
+
+💾 Results saved to: results/evaluation_results.json

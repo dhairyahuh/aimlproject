@@ -1,0 +1,410 @@
+{
+  "Random Forest": {
+    "fold_results": [
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      }
+    ],
+    "aggregated": {
+      "accuracy_mean": 1.0,
+      "accuracy_std": 0.0,
+      "accuracy_min": 1.0,
+      "accuracy_max": 1.0,
+      "precision_mean": 1.0,
+      "precision_std": 0.0,
+      "precision_min": 1.0,
+      "precision_max": 1.0,
+      "recall_mean": 1.0,
+      "recall_std": 0.0,
+      "recall_min": 1.0,
+      "recall_max": 1.0,
+      "f1_mean": 1.0,
+      "f1_std": 0.0,
+      "f1_min": 1.0,
+      "f1_max": 1.0
+    }
+  },
+  "SVM": {
+    "fold_results": [
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      }
+    ],
+    "aggregated": {
+      "accuracy_mean": 1.0,
+      "accuracy_std": 0.0,
+      "accuracy_min": 1.0,
+      "accuracy_max": 1.0,
+      "precision_mean": 1.0,
+      "precision_std": 0.0,
+      "precision_min": 1.0,
+      "precision_max": 1.0,
+      "recall_mean": 1.0,
+      "recall_std": 0.0,
+      "recall_min": 1.0,
+      "recall_max": 1.0,
+      "f1_mean": 1.0,
+      "f1_std": 0.0,
+      "f1_min": 1.0,
+      "f1_max": 1.0
+    }
+  },
+  "Naive Bayes": {
+    "fold_results": [
+      {
+        "accuracy": 0.875,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8888888888888888,
+        "confusion_matrix": [
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 0.8571428571428571,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8888888888888888,
+        "confusion_matrix": [
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 0.7142857142857143,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "confusion_matrix": [
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      }
+    ],
+    "aggregated": {
+      "accuracy_mean": 0.8892857142857142,
+      "accuracy_std": 0.10618620533798932,
+      "accuracy_min": 0.7142857142857143,
+      "accuracy_max": 1.0,
+      "precision_mean": 0.8533333333333333,
+      "precision_std": 0.12927146286443544,
+      "precision_min": 0.6666666666666666,
+      "precision_max": 1.0,
+      "recall_mean": 0.9333333333333333,
+      "recall_std": 0.13333333333333336,
+      "recall_min": 0.6666666666666666,
+      "recall_max": 1.0,
+      "f1_mean": 0.888888888888889,
+      "f1_std": 0.12171612389003693,
+      "f1_min": 0.6666666666666666,
+      "f1_max": 1.0
+    }
+  },
+  "MLP": {
+    "fold_results": [
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      }
+    ],
+    "aggregated": {
+      "accuracy_mean": 1.0,
+      "accuracy_std": 0.0,
+      "accuracy_min": 1.0,
+      "accuracy_max": 1.0,
+      "precision_mean": 1.0,
+      "precision_std": 0.0,
+      "precision_min": 1.0,
+      "precision_max": 1.0,
+      "recall_mean": 1.0,
+      "recall_std": 0.0,
+      "recall_min": 1.0,
+      "recall_max": 1.0,
+      "f1_mean": 1.0,
+      "f1_std": 0.0,
+      "f1_min": 1.0,
+      "f1_max": 1.0
+    }
+  }
+}

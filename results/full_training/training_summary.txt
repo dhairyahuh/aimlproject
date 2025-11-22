@@ -1,0 +1,39 @@
+
+======================================================================
+ASD/ADHD DETECTION - FULL TRAINING SUMMARY
+======================================================================
+
+TRAINING CONFIGURATION:
+  - Input Dimension: 40
+  - Number of Classes: 8
+  - Total Epochs Trained: 88
+  - Batch Size: 32
+  - Optimizer: Adam (initial lr=0.001)
+  - Callbacks: EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
+
+FINAL RESULTS:
+  - Train Accuracy: 0.9277 | Loss: 0.4831
+  - Val Accuracy:   0.7717 | Loss: 0.8854
+  - Test Accuracy:  0.7418 | Loss: 0.9062
+
+TEST SET PERFORMANCE:
+  - Weighted Precision: 0.7528
+  - Weighted Recall:    0.7418
+  - Weighted F1-Score:  0.7393
+
+CLASS DISTRIBUTION:
+  - Train: {np.int64(0): np.int64(263), np.int64(1): np.int64(263), np.int64(2): np.int64(134), np.int64(3): np.int64(263), np.int64(4): np.int64(263), np.int64(5): np.int64(132), np.int64(6): np.int64(263), np.int64(7): np.int64(135)}
+  - Val:   {np.int64(0): np.int64(56), np.int64(1): np.int64(57), np.int64(2): np.int64(29), np.int64(3): np.int64(56), np.int64(4): np.int64(56), np.int64(5): np.int64(28), np.int64(6): np.int64(57), np.int64(7): np.int64(29)}
+  - Test:  {np.int64(0): np.int64(57), np.int64(1): np.int64(56), np.int64(2): np.int64(29), np.int64(3): np.int64(57), np.int64(4): np.int64(57), np.int64(5): np.int64(28), np.int64(6): np.int64(56), np.int64(7): np.int64(28)}
+
+SAVED ARTIFACTS:
+  - Model: f:\AIML\ASD_ADHD_Detection\external_helpers\full_trained_model.keras
+  - Scaler: f:\AIML\ASD_ADHD_Detection\external_helpers\data_scaler.pkl
+  - Metrics: f:\AIML\ASD_ADHD_Detection\results\full_training\metrics.json
+  - History: f:\AIML\ASD_ADHD_Detection\results\full_training\training_history.pkl
+  - Training Curves: f:\AIML\ASD_ADHD_Detection\results\full_training\training_curves.png
+  - Confusion Matrix: f:\AIML\ASD_ADHD_Detection\results\full_training\confusion_matrix_test.png
+  - Per-Class Metrics: f:\AIML\ASD_ADHD_Detection\results\full_training\per_class_metrics_test.png
+
+TIMESTAMP: 2025-11-13 01:05:47
+======================================================================
