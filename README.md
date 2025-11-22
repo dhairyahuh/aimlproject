@@ -230,31 +230,8 @@ print(f"Prediction: {prediction['class']}")
 print(f"Confidence: {prediction['confidence']:.2%}")
 ```
 
-### 4. **Web Dashboard (Streamlit)**
-
-```bash
-streamlit run streamlit_app/app.py
-```
-
-Open browser → `http://localhost:8501`
 
 ---
-
-## Reference Repositories & Adaptations
-
-### Core Implementations
-
-| Repository | Purpose | Adaptation |
-|---|---|---|
-| **x4nth055/emotion-recognition-using-speech** | MLP architecture, real-time recording | → MLP classifier for ASD/ADHD |
-| **mondtorsha/Speech-Emotion-Recognition** | MLP vs LSTM on RAVDESS | → MLP architecture & training loop |
-| **pyAudioAnalysis** | Audio feature extraction patterns | → Spectral features extraction |
-| **python_speech_features** | MFCC computation | → MFCC extraction pipeline |
-| **Parselmouth** | Prosodic analysis interface | → Pitch, formants, jitter, shimmer |
-| **Dinstein-Lab/ASDSpeech** | 49 autism acoustic features | → Extended to 100+ features |
-| **ronit1706/Autism-Detection** | Multi-class ML models (RF, SVM, ANN) | → Multi-class (ASD/ADHD/Healthy) MLP |
-| **56kd/MulitmodalDepressionDetection** | Hybrid CNN-LSTM, audio extraction | → Feature extraction patterns |
-| **MITESHPUTHRANNEU/Speech-Emotion-Analyzer** | Web dashboard with visualization | → Streamlit app structure |
 
 ### Pattern Mappings
 
@@ -332,7 +309,7 @@ Based on reference implementations:
 - **Recall**: ≥ 0.82 per class
 - **F1 Score**: ≥ 0.82
 
-*Reference: ronit1706/Autism-Detection achieved 90% on binary ASD/non-ASD*
+
 
 ---
 
@@ -380,31 +357,6 @@ GET /model/info
 - [ ] **Mobile Deployment**: TensorFlow Lite for mobile apps
 - [ ] **A/B Testing**: Clinical validation framework
 
----
-
-## Citation & References
-
-This project adapts implementations and patterns from multiple open-source repositories:
-
-```bibtex
-@misc{emotion_recognition_speech,
-  title={Speech Emotion Recognition using MLP},
-  author={x4nth055},
-  url={https://github.com/x4nth055/emotion-recognition-using-speech}
-}
-
-@misc{asd_speech,
-  title={Autism Spectrum Disorder Detection from Speech},
-  author={Dinstein Lab},
-  url={https://github.com/Dinstein-Lab/ASDSpeech}
-}
-
-@misc{autism_detection,
-  title={Autism Detection using Machine Learning},
-  author={Ronit Khurana},
-  url={https://github.com/ronit1706/Autism-Detection}
-}
-```
 
 ---
 
@@ -425,4 +377,4 @@ For questions or issues:
 
 **Last Updated**: November 2025  
 **Version**: 1.0.0  
-**Status**: Active Development 🚀
+
