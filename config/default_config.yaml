@@ -1,0 +1,268 @@
+# ASD/ADHD Detection System - Default Configuration File
+# This YAML file can be loaded and modified at runtime
+# Based on: config/config_file.yaml pattern from reference materials
+
+project_config:
+    name: "ASD/ADHD Voice Detection System"
+    version: "1.0.0"
+    description: "Real-time differential diagnosis using acoustic features and MLP"
+    author: "AI/ML Team"
+    created_date: "2025-11-13"
+
+paths_config:
+    project_root: './ASD_ADHD_Detection'
+    data_raw_path: './data/raw'
+    data_processed_path: './data/processed'
+    data_splits_path: './data/splits'
+    models_save_path: './models/saved'
+    checkpoints_path: './models/checkpoints'
+    results_path: './results'
+    logs_path: './logs'
+    notebooks_path: './notebooks'
+    streamlit_path: './streamlit_app'
+
+audio_config:
+    sample_rate: 16000              # Hz
+    duration: 5                      # seconds
+    chunk_duration: 0.025           # seconds (25ms window)
+    step_duration: 0.010            # seconds (10ms step)
+    n_fft: 2048
+    normalize_audio: true
+    trim_silence: true
+    trim_threshold_db: 30
+    enable_vad: true
+    vad_threshold: 0.5
+
+mfcc_config:
+    n_mfcc: 13
+    n_mel: 128
+    fmin: 80
+    fmax: 7600
+    compute_delta: true
+    compute_delta_delta: true
+    statistics: ['mean', 'std', 'min', 'max', 'median', 'q25', 'q75']
+
+spectral_config:
+    compute_spectral_centroid: true
+    compute_spectral_rolloff: true
+    compute_spectral_bandwidth: true
+    compute_zero_crossing_rate: true
+    compute_rms_energy: true
+    compute_log_energy: true
+    compute_chroma: true
+    n_chroma: 12
+    statistics: ['mean', 'std', 'min', 'max']
+
+prosodic_config:
+    compute_f0: true
+    f0_min: 80                      # Hz
+    f0_max: 400                     # Hz
+    f0_voicing_threshold: 0.45
+    compute_formants: true
+    num_formants: 3
+    max_formant: 5000               # Hz
+    compute_formant_bandwidth: true
+    compute_duration: true
+    compute_jitter: true
+    jitter_window_ms: 40
+    compute_shimmer: true
+    shimmer_window_ms: 40
+    compute_hnr: true
+    compute_voice_breaks: true
+    compute_voiced_rate: true
+
+feature_config:
+    compute_mfcc: true
+    compute_spectral: true
+    compute_prosodic: true
+    expected_num_features: 106
+    normalize_features: true
+    normalization_method: 'standard'    # 'standard' or 'minmax'
+    aggregation_method: 'statistics'    # 'statistics', 'mean', or 'concatenate'
+    use_pca: false
+    pca_components: 80
+    use_feature_selection: false
+    selected_features: 50
+
+dataset_config:
+    classes:
+        0: 'Healthy'
+        1: 'ASD'
+        2: 'ADHD'
+    num_classes: 3
+    train_ratio: 0.70
+    val_ratio: 0.15
+    test_ratio: 0.15
+    use_kfold: true
+    k_folds: 5
+    random_state: 42
+    enable_data_augmentation: true
+    augmentation_factor: 1.5
+    use_class_weights: true
+    handle_imbalance: true
+
+mlp_config:
+    input_dim: 106
+    hidden_layers: [128, 64, 32]
+    output_dim: 3
+    hidden_activation: 'relu'
+    output_activation: 'softmax'
+    use_batch_norm: true
+    dropout_rate: 0.3
+    l2_regularization: 0.0001
+
+training_config:
+    epochs: 100
+    batch_size: 32
+    learning_rate: 0.001
+    optimizer: 'adam'
+    loss_function: 'categorical_crossentropy'
+    metrics: ['accuracy', 'precision', 'recall']
+    use_lr_scheduler: true
+    lr_scheduler_type: 'step'           # 'step', 'exponential', 'cosine'
+    lr_step_size: 20
+    lr_gamma: 0.5
+    enable_early_stopping: true
+    early_stopping_patience: 15
+    early_stopping_metric: 'val_loss'
+    early_stopping_mode: 'min'
+    save_best_only: true
+    checkpoint_metric: 'val_accuracy'
+    validation_split: 0.15
+    shuffle_training_data: true
+
+realtime_config:
+    enable_realtime: true
+    channels: 1
+    chunk_size: 1024
+    record_duration: 5              # seconds
+    buffer_size: 10
+    process_chunk_by_chunk: true
+    overlap_ratio: 0.5
+    batch_inference: false
+    confidence_threshold: 0.7
+    show_waveform: true
+    show_spectrogram: true
+    log_predictions: true
+
+evaluation_config:
+    compute_confusion_matrix: true
+    compute_roc_curve: true
+    compute_precision_recall: true
+    compute_f1_score: true
+    compute_ccc: false
+    use_cross_validation: true
+    cv_folds: 5
+    report_class_wise: true
+    average_method: 'weighted'          # 'weighted', 'macro', 'micro'
+    normalize_confusion_matrix: true
+    aggregation_method: 'majority_voting'
+    save_plots: true
+    plot_format: 'png'
+    dpi: 300
+
+persistence_config:
+    save_model_json: true
+    save_model_weights: true
+    save_model_h5: true
+    save_model_onnx: false
+    keep_best_checkpoints: 3
+    checkpoint_format: 'h5'
+    model_name_prefix: 'asd_adhd_mlp'
+    model_version: 'v1.0'
+    include_timestamp: true
+    save_scaler: true
+    save_label_encoder: true
+    metadata_format: 'json'
+
+logging_config:
+    log_level: 'INFO'                   # 'DEBUG', 'INFO', 'WARNING', 'ERROR'
+    log_format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    date_format: '%Y-%m-%d %H:%M:%S'
+    use_tensorboard: true
+    debug_mode: false
+    verbose: true
+    save_intermediate_features: false
+
+streamlit_config:
+    page_title: "ASD/ADHD Voice Detection System"
+    page_icon: "🎙️"
+    layout: "wide"
+    show_audio_player: true
+    show_waveform_plot: true
+    show_spectrogram: true
+    show_feature_heatmap: true
+    show_confidence_bars: true
+    max_upload_size_mb: 25
+    allowed_formats: ['wav', 'mp3', 'ogg', 'flac']
+    enable_realtime_recording: true
+    realtime_timeout_seconds: 30
+    plot_width: 800
+    plot_height: 600
+    enable_export_results: true
+    export_formats: ['csv', 'json', 'pdf']
+
+hypertuning_config:
+    enable_hypertuning: false
+    tuning_metric: 'val_accuracy'
+    tuning_mode: 'max'                  # 'min' or 'max'
+    search_method: 'grid'               # 'grid', 'random', 'bayesian'
+    n_iterations: 100
+    learning_rate_range: [0.00001, 0.001]
+    batch_size_range: [8, 64]
+    dropout_range: [0.1, 0.5]
+    hidden_units_range: [64, 256]
+    tuning_cv_folds: 3
+    random_state: 42
+
+device_config:
+    use_gpu: true
+    gpu_id: 0
+    gpu_memory_fraction: 0.8
+    allow_growth: true
+    use_mixed_precision: false
+    num_workers: 4
+    pin_memory: true
+
+inference_config:
+    return_class_label: true
+    return_confidence_scores: true
+    return_top_k_predictions: 3
+    batch_size: 32
+    prefetch_buffer: 10
+    provide_explanation: true
+    highlight_vocal_markers: true
+    cache_predictions: false
+
+auxiliary_config:
+    enable_api_server: true
+    api_port: 8000
+    api_host: '0.0.0.0'
+    use_database: false
+    database_type: 'sqlite'
+    database_url: 'sqlite:///./asd_adhd.db'
+    send_email_reports: false
+    use_mlflow: false
+    git_sync: false
+    random_seed: 42
+
+# Hyperparameter ranges for tuning (from code/hyper_tune.py pattern)
+hyper_tune_config:
+    calculate: 'read'                   # 'tune', 'read', or 'load'
+    cv_k: 4
+    n_iters: 100
+    statistic: 'accuracy'               # metric for selection
+    batch_size:
+        start: 3                        # 2^3 = 8
+        stop: 7                         # 2^7 = 128
+    n_epochs:
+        start: 10
+        stop: 100
+        step: 10
+    learn_rate:
+        start: -5                       # 10^-5
+        stop: -1                        # 10^-1
+    best_params:
+        batch_size: null
+        epochs: null
+        learn_rate: null
