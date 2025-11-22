@@ -1,0 +1,85 @@
+# Core Dependencies
+numpy==1.24.3
+scipy==1.11.1
+scikit-learn==1.3.0
+pandas==2.0.3
+
+# Audio Processing
+librosa==0.10.0
+soundfile==0.12.1
+python-speech-features==0.6.1
+pyroomacoustics==0.7.28
+sounddevice==0.4.6  # For real-time audio recording
+
+# Prosodic Analysis (Parselmouth interface with Praat)
+parselmouth==0.4.2
+
+# Deep Learning
+tensorflow==2.13.0
+keras==2.13.1
+torch==2.0.1
+torchaudio==2.0.2
+
+# Neural Network Optimization
+optuna==3.12.0
+
+# Data Augmentation
+audiomentations==0.29.1
+
+# Visualization & Plotting
+matplotlib==3.7.2
+seaborn==0.12.2
+plotly==5.15.0
+
+# Metrics & Evaluation
+scikit-metrics==0.2.2
+pyannote.metrics==0.7
+
+# Web Framework (Streamlit Dashboard)
+streamlit==1.25.0
+streamlit-option-menu==0.3.6
+streamlit-webrtc==0.47.0
+
+# Data Processing & Feature Engineering
+imbalanced-learn==0.11.0
+pca==0.3
+
+# Experiment Tracking & Logging
+mlflow==2.5.0
+tensorboard==2.13.0
+wandb==0.15.3
+
+# Utilities
+python-dotenv==1.0.0
+pyyaml==6.0
+joblib==1.3.1
+tqdm==4.66.1
+click==8.1.6
+
+# Development & Testing
+pytest==7.4.0
+pytest-cov==4.1.0
+black==23.7.0
+flake8==6.0.0
+pylint==2.17.4
+
+# Documentation
+sphinx==7.1.2
+sphinx-rtd-theme==1.3.0
+
+# Optional: GPU Acceleration
+# Note: Install separately based on your CUDA version
+# tensorflow-gpu==2.13.0
+# torch-cuda==2.0.1
+
+# Optional: Model Deployment
+# onnx==1.14.0
+# onnxruntime==1.15.1
+# flask==2.3.2
+# fastapi==0.99.1
+# uvicorn==0.23.1
+
+# Optional: Advanced Features
+# transformers==4.31.0  # For BERT text analysis
+# speechbrain==0.5.13   # Alternative speech processing
+# webrtcvad==2.0.10     # Voice Activity Detection
